@@ -1,5 +1,12 @@
-import data from "./data.json";
+import data from "./data.json" assert { type: "json" };
 
-//Simulate data coming from server
+//Simulate data coming from a server
 const asyncData = await data;
-console.log(asyncData);
+
+const openButton = document.querySelector(".btn--open");
+const overlay = document.querySelector(".overlay");
+
+openButton.addEventListener("click", () => {
+  overlay.style.display = "block";
+  openButton.style.display = "none";
+});
