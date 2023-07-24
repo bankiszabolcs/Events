@@ -13,7 +13,7 @@ body {
   margin: auto auto;
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: none;
 }
 
 .container {
@@ -46,11 +46,11 @@ body {
 .table {
   border-radius: 10px;
   background: #00d487;
-  width: 400px;
+  width: 600px;
   position: relative;
-  border: 3px solid black;
-  padding: 5px;
+  border: 5px solid black;
   word-wrap: break-word;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
   font-family: "Barlow", sans-serif;
   text-align: center;
@@ -59,19 +59,44 @@ body {
   content: " ";
   position: absolute;
   z-index: 99;
-  top: -6px;
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
   border: 3px solid white;
   border-radius: 10px;
+}
+.table__firstrow {
+  padding: 5px;
 }
 .table__secondrow {
   background-color: white;
   color: black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  padding: 5px;
 }
 .table__thirdrow {
   display: flex;
+  justify-content: space-between;
+}
+.table__thirdrow--left, .table__thirdrow--center {
+  border-right: 5px solid black;
+}
+.table__thirdrow--left {
+  text-align: left;
+  flex: 1;
+  padding: 5px;
+}
+.table__thirdrow--center {
+  text-align: center;
+  flex: 1;
+  padding: 5px;
+}
+.table__thirdrow--right {
+  text-align: right;
+  flex: 1;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

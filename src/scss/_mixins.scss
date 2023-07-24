@@ -30,3 +30,11 @@
     }
   }
 }
+
+@mixin thirdrow-style($modifier) {
+  &--#{$modifier} {
+    text-align: $modifier;
+    flex: 1;
+    padding: 5px;
+  }
+}
