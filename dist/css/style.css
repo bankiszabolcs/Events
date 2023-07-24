@@ -80,23 +80,15 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.table__thirdrow--left, .table__thirdrow--center {
-  border-right: 5px solid black;
+.table__thirdrow div {
+  flex: 1;
+  padding: 5px;
 }
-.table__thirdrow--left {
+.table__thirdrow div:first-child {
   text-align: left;
-  flex: 1;
-  padding: 5px;
 }
-.table__thirdrow--center {
-  text-align: center;
-  flex: 1;
-  padding: 5px;
-}
-.table__thirdrow--right {
+.table__thirdrow div:last-child {
   text-align: right;
-  flex: 1;
-  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -32,9 +32,27 @@ function changeText(num) {
 
   const dateString = makeDate(actualEvent);
   document.querySelector(".table__secondrow").textContent = dateString;
+
+  generateCols(actualEvent.talent);
 }
 
-async function displayOverlay() {
+function generateCols(nameArr) {
+  const thirdRow = document.querySelector(".table__thirdrow");
+
+  for (let i = 0; i < nameArr.length; i++) {
+    const div = document.createElement("div");
+    div.classList.add(`table__thirdrow--col${i}`);
+    div.textContent = nameArr[i];
+    thirdRow.appendChild(div);
+
+    if (nameArr.length > 1) {
+      div.style.borderRight = "5px solid black";
+      if (i === nameArr.length - 1) div.style.borderRight = "0";
+    }
+  }
+}
+
+function displayOverlay() {
   overlay.style.display = "flex";
   openButton.style.display = "none";
 

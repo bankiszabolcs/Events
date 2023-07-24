@@ -16,7 +16,6 @@ body {
   margin: auto auto;
   justify-content: center;
   align-items: center;
-  //display: flex;
   display: none;
 }
 
@@ -86,13 +85,17 @@ body {
     display: flex;
     justify-content: space-between;
 
-    &--left,
-    &--center {
-      border-right: 5px solid black;
+    div {
+      flex: 1;
+      padding: 5px;
     }
 
-    @include mixins.thirdrow-style(left);
-    @include mixins.thirdrow-style(center);
-    @include mixins.thirdrow-style(right);
+    div:first-child {
+      text-align: left;
+    }
+
+    div:last-child {
+      text-align: right;
+    }
   }
 }
