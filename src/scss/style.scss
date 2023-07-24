@@ -1,17 +1,23 @@
 @use "colors";
 @use "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&display=swap");
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: colors.$text;
 }
 
 .overlay {
   background-color: #252525;
   height: 950px;
   width: 1920px;
-  display: none;
+  margin: auto auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  //display: none;
 }
 
 .container {
@@ -38,4 +44,38 @@ body {
   }
 
   @include mixins.btn-style(open, colors.$success);
+}
+
+.table {
+  border-radius: 10px;
+  background: #00d487;
+  width: 400px;
+  position: relative;
+  border: 3px solid black;
+  padding: 5px;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    z-index: 99;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 3px solid white;
+    border-radius: 10px;
+  }
+
+  &__secondrow {
+    background-color: white;
+    color: black;
+  }
+
+  &__thirdrow {
+    display: flex;
+  }
 }
