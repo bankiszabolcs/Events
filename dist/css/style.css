@@ -103,9 +103,11 @@ body {
   flex-grow: 1;
 }
 .table__thirdrow div:first-child {
+  justify-content: flex-start;
   text-align: left;
 }
 .table__thirdrow div:last-child {
+  justify-content: flex-end;
   text-align: right;
 }
 

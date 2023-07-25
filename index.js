@@ -50,6 +50,7 @@ function generateCols(nameArr) {
     } else {
       thirdRow.textContent = nameArr[i];
       thirdRow.style.justifyContent = "center";
+      thirdRow.style.alignItems = "center";
     }
   }
 }

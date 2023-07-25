@@ -109,10 +109,12 @@ body {
     }
 
     div:first-child {
+      justify-content: flex-start;
       text-align: left;
     }
 
     div:last-child {
+      justify-content: flex-end;
       text-align: right;
     }
   }
