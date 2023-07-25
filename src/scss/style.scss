@@ -1,22 +1,13 @@
 @use "colors";
 @use "mixins";
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&display=swap");
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: colors.$text;
-}
-
-.overlay {
-  background-color: #252525;
-  height: 950px;
-  width: 1920px;
-  margin: auto auto;
-  justify-content: center;
-  align-items: center;
-  display: none;
+  font-family: "Exo 2", sans-serif;
 }
 
 .container {
@@ -28,7 +19,7 @@ body {
   border-radius: 0.25rem;
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.15);
   color: #fff;
-  font: 1rem/1.5 Arial, Helvetica, sans-serif;
+  font-size: larger;
   padding: 0.5rem 1rem;
   user-select: none;
   transition: text-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
@@ -45,17 +36,28 @@ body {
   @include mixins.btn-style(open, colors.$success);
 }
 
+.overlay {
+  background-color: #252525;
+  height: 950px;
+  width: 1920px;
+  margin: auto auto;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
 .table {
   border-radius: 10px;
   background: #00d487;
-  width: 600px;
+  width: 500px;
+  height: 200px;
   position: relative;
   border: 5px solid black;
   word-wrap: break-word;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  text-transform: uppercase;
-  font-family: "Barlow", sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
 
   &:before {
     content: " ";
@@ -70,7 +72,14 @@ body {
   }
 
   &__firstrow {
-    padding: 5px;
+    padding: 20px 60px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 80%;
   }
 
   &__secondrow {
@@ -79,15 +88,18 @@ body {
     border-top: 5px solid black;
     border-bottom: 5px solid black;
     padding: 5px;
+    flex-grow: 1;
   }
 
   &__thirdrow {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-grow: 2;
 
     div {
       flex: 1;
-      padding: 5px;
+      padding: 15px;
     }
 
     div:first-child {

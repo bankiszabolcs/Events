@@ -1,6 +1,6 @@
 import data from "./data.json" assert { type: "json" };
 
-//Simulate data coming from a server
+// Simulate data coming from a server
 const asyncData = await data;
 
 const openButton = document.querySelector(".btn--open");
@@ -13,7 +13,7 @@ function getRandomNum(min, max) {
 }
 
 function makeDate(event) {
-  let options = {
+  const options = {
     month: "long",
     day: "numeric",
   };
@@ -40,14 +40,16 @@ function generateCols(nameArr) {
   const thirdRow = document.querySelector(".table__thirdrow");
 
   for (let i = 0; i < nameArr.length; i++) {
-    const div = document.createElement("div");
-    div.classList.add(`table__thirdrow--col${i}`);
-    div.textContent = nameArr[i];
-    thirdRow.appendChild(div);
-
     if (nameArr.length > 1) {
-      div.style.borderRight = "5px solid black";
+      const div = document.createElement("div");
+      div.classList.add(`table__thirdrow--col${i}`);
+      div.textContent = nameArr[i];
+      thirdRow.appendChild(div);
+      div.style.borderRight = "4px solid black";
       if (i === nameArr.length - 1) div.style.borderRight = "0";
+    } else {
+      thirdRow.textContent = nameArr[i];
+      thirdRow.style.justifyContent = "center";
     }
   }
 }
