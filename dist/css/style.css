@@ -56,6 +56,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: larger;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
 }
 .table:before {
   content: " ";
@@ -85,16 +86,21 @@ body {
   border-bottom: 5px solid black;
   padding: 5px;
   flex-grow: 1;
+  text-shadow: none;
 }
 .table__thirdrow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   flex-grow: 2;
 }
 .table__thirdrow div {
   flex: 1;
   padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 .table__thirdrow div:first-child {
   text-align: left;
