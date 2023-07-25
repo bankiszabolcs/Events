@@ -53,7 +53,7 @@ body {
   height: 200px;
   position: relative;
   border: 5px solid black;
-  word-wrap: break-word;
+  word-wrap: break-all;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -85,6 +85,9 @@ body {
 
   &__secondrow {
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: black;
     border-top: 5px solid black;
     border-bottom: 5px solid black;

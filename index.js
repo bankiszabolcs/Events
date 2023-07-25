@@ -33,6 +33,10 @@ function changeText(num) {
   const dateString = makeDate(actualEvent);
   document.querySelector(".table__secondrow").textContent = dateString;
 
+  const table = document.querySelector(".table");
+
+  table.style.backgroundColor = actualEvent.color;
+
   generateCols(actualEvent.talent);
 }
 
